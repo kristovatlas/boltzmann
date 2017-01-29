@@ -2,12 +2,7 @@
 
 A python script computing the entropy of Bitcoin transactions and the linkability of their inputs and outputs.
 
-Initially developed for the OXT platform.
-
-Certainly, the worst implementation in the world but with a nice property: it exists :)
-
-
-More information at:
+For a description of the metrics :
 
 - Bitcoin Transactions & Privacy (part 1) : https://gist.github.com/LaurentMT/e758767ca4038ac40aaf
 
@@ -101,8 +96,9 @@ rpcport=8332
 txindex=1
 ```
 
-## Author
-Twitter: @LaurentMT
+## Contributors
+@LaurentMT
+@kristovatlas
 
 
 ## Contributing
