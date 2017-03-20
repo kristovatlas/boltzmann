@@ -25,37 +25,44 @@ class CompareTest(unittest.TestCase):
          'inputs': [{'n': 0,
                      'value': 5000000000,
                      'address': '1HYAekgNKqQiCadt3fnKdLQFFNLFHPPnCR',
-                     'tx_idx': 239354
+                     'tx_idx': 239354,
+                     'script': '4104cd31654088e472c60ab1c6ee7743deb186dce0b1ad5fc45691d37dad2620128e4b33c7c9c19ed01a5817e6e54c12fe1b83eafcb830440f23a2ce903cdb1df52fac'
                     },
                     {'n': 0,
                      'value': 5000000000,
                      'address': '16hwoJvz1xje8HBgoLZcxwo1CwE3cvkb17',
-                     'tx_idx': 239356
+                     'tx_idx': 239356,
+                     'script': '41041e1f1bdccf8cd5b9d3ffc0a14a36ad8a97663f14d16b94104d073abfc693d04178f263495cd6037aed097175297b39cfe5f5b9706fd425795bf7f61108145b53ac'
                     },
                     {'n': 0,
                      'value': 5000000000,
                      'address': '1KWGBfAsuBFzKQ7bhSJV5WbgVNvvQ5R1j2',
-                     'tx_idx': 239322
+                     'tx_idx': 239322,
+                     'script': '41043ea537ed214d2bcb07f56d2ecb047a4bd11d13fa160856f84e77e8d31ab2154cd2eb8cad37747b50b0b04d739186058d64212368202d1b41bc44fcb6decb90eaac'
                     },
                     {'n': 0,
                      'value': 5000000000,
                      'address': '15XgnazTwLj7sNPkbUo5vCSKBmR43X5vW4',
-                     'tx_idx': 239205
+                     'tx_idx': 239205,
+                     'script': '4104b2424b051a79a55b9f7970ceeecb25e81b876c53d9e46d6ee7e0ae656b94f8cf3a27a1b3f2465ac19409e2a08fb7d1f549adc70a5f90ff8418061688186064f4ac'
                     },
                     {'n': 0,
                      'value': 5001000000,
                      'address': '16HjHvF5umsgAzaX2ddosB81ttkrVHkvqo',
-                     'tx_idx': 239162
+                     'tx_idx': 239162,
+                     'script': '4104a7d578da4514a14b08d1e939924efaeacfde7d7d2897f2cef87248aaa4e3cd226f0660b9bf759448f9fb2f586f6027667b73d34a8114186265f9364193599c2cac'
                     }],
          'outputs': [{'n': 0,
                       'value': 25000000000,
                       'address': '15xif4SjXiFi3NDEsmMZCfTdE9jvvVQrjU',
-                      'tx_idx': 240051
+                      'tx_idx': 240051,
+                      'script': '76a914366a27645806e817a6cd40bc869bdad92fe5509188ac'
                      },
                      {'n': 1,
                       'value': 1000000,
                       'address': '1NkKLMgbSjXrT7oHagnGmYFhXAWXjJsKCj',
-                      'tx_idx': 240051
+                      'tx_idx': 240051,
+                      'script': '76a914ee8bd501094a7d5ca318da2506de35e1cb025ddc88ac'
                      }]
         },
         {'height': 299173,
@@ -64,32 +71,38 @@ class CompareTest(unittest.TestCase):
          'inputs': [{'n': 0,
                      'value': 10000000,
                      'address': '1FJNUgMPRyBx6ahPmsH6jiYZHDWBPEHfU7',
-                     'tx_idx': 55795695
+                     'tx_idx': 55795695,
+                     'script': '76a9149cdac2b6a77e536f5f4ab6518fb078861f4dbf5188ac',
                     },
                     {'n': 1,
                      'value': 1380000,
                      'address': '1JDHTo412L9RCtuGbYw4MBeL1xn7ZTuzLH',
-                     'tx_idx': 55462552
+                     'tx_idx': 55462552,
+                     'script': '76a914bcccdf22a567d2c30762c2c44edd3d4ff40e944c88ac'
                     }],
          'outputs': [{'n': 0,
                       'value': 100000,
                       'address': '1JR3x2xNfeFicqJcvzz1gkEhHEewJBb5Zb',
-                      'tx_idx': 55819527
+                      'tx_idx': 55819527,
+                      'script': '76a914bf06953ec3c533d040929dc82eb4845ec0d8171088ac'
                      },
                      {'n': 1,
                       'value': 9850000,
                       'address': '18JNSFk8eRZcM8RdqLDSgCiipgnfAYsFef',
-                      'tx_idx': 55819527
+                      'tx_idx': 55819527,
+                      'script': '76a9145011d8607971901c1135c2e8ae3074c472af4bf188ac'
                      },
                      {'n': 2,
                       'value': 100000,
                       'address': '1ALKUqxRb2MeFqomLCqeYwDZK6FvLNnP3H',
-                      'tx_idx': 55819527
+                      'tx_idx': 55819527,
+                      'script': '76a91466607632dc9e3c0ed2e24fe3c54ea488408e99f588ac'
                      },
                      {'n': 3,
                       'value': 1270000,
                       'address': '1PA1eHufj8axDWEbYfPtL8HXfA66gTFsFc',
-                      'tx_idx': 55819527
+                      'tx_idx': 55819527,
+                      'script': '76a914f3070c305b4bca72aa4b57bcbad05de5a692f16a88ac'
                      }
                     ]
         }]

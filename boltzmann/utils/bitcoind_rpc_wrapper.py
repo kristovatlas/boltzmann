@@ -107,7 +107,7 @@ class BitcoindRPCWrapper(BlockchainDataWrapper):
     def _get_decoded_tx(self, txid):
         """Gets a human-readable string of the transaction in JSON format."""
         try:
-            return self._con.decoderawtransaction(self._get_raw_tx(txid))
+            return self._con.getrawtransaction(txid, 1)
         except NoDataAvailableForGenesisBlockError:
             #bitcoind won't generate this, but here's what it would look like
             return self.GENESIS_BLOCK
@@ -168,8 +168,7 @@ class BitcoindRPCWrapper(BlockchainDataWrapper):
                     "Can't decode address for txo {0}:{1}".format(prev_txid,
                                                                   output_index))
             else:
-                return prev_tx['vout'][output_index]['scriptPubKey'][
-                    'addresses'][0]
+                return ' '.join(prev_tx['vout'][output_index]['scriptPubKey']['addresses'])
         else:
             raise PrevOutAddressCannotBeDecodedError(
                 ("Missing element for vout in get_output_address() with tx "
@@ -201,6 +200,7 @@ class BitcoindRPCWrapper(BlockchainDataWrapper):
         prev_tx = self._get_decoded_tx(prev_txid)
         bci_input['prev_out']['addr'] = self._get_output_address(
             prev_txid, prev_vout_num, prev_tx)
+        bci_input['prev_out']['script'] = prev_tx['vout'][prev_vout_num]['scriptPubKey']['hex']
         float_val = prev_tx['vout'][prev_vout_num]['value']
         bci_input['prev_out']['value'] = _float_to_satoshi(float_val)
         return bci_input
@@ -274,6 +274,7 @@ def _rpc_to_bci_output(rpc_output):
     bci_output = dict()
     bci_output['tx_index'] = None
     bci_output['n'] = rpc_output['n']
-    bci_output['addr'] = rpc_output['scriptPubKey']['addresses'][0]
+    bci_output['addr'] = ' '.join(rpc_output['scriptPubKey']['addresses'])
+    bci_output['script'] = rpc_output['scriptPubKey']['hex']
     bci_output['value'] = _float_to_satoshi(rpc_output['value'])
     return bci_output
