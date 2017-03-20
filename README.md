@@ -97,18 +97,18 @@ txindex=1
 ```
 
 ## Contributors
-@LaurentMT
+@LaurentMT 
 @kristovatlas
 
 
 ## Contributing
 
-Help us to make Boltzmann better !
-
 Many improvements are needed:
  - smarter heuristics to manage intra fees paid/received by participants to coinjoin markets (e.g. joinmarket, ...)
  - optimization of the algorithm (parallelization, memoization, ...)
  - ...
+
+Help us to make Boltzmann better !
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
