@@ -107,7 +107,7 @@ class CompareTest(unittest.TestCase):
                     ]
         }]
     '''
-        TODO:Both of these currently raise exception for BCI, so shouldnt work for RPC either
+        TODO:Both of these currently raise exception for BCI, so shouldnt work for RPC either.
         { #genesis block coinbase tx
             'height': 0,
             'time': 1231006505,
