@@ -80,7 +80,7 @@ def main(txids, rpc, options=['PRECHECK', 'LINKABILITY', 'MERGE_INPUTS'], max_du
         provider_descriptor = 'local RPC interface'
     else:
         blockchain_provider = BlockchainInfoWrapper()
-        provider_descriptor = 'remove blockchain.info API'
+        provider_descriptor = 'remote blockchain.info API'
 
     print("DEBUG: Using %s" % provider_descriptor)
 
