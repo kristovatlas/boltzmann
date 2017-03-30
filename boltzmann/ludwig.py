@@ -5,6 +5,7 @@ Created on 20160917
 import os
 import math
 import getopt
+import traceback
 
 import sys
 # Adds boltzmann directory into path
@@ -91,7 +92,7 @@ def main(txids, rpc, options=['PRECHECK', 'LINKABILITY', 'MERGE_INPUTS'], max_du
             tx = blockchain_provider.get_tx(txid)
             print("DEBUG: Tx fetched: {0}".format(str(tx)))
         except Exception as err:
-            print('Unable to retrieve information for %s from %s: %s' % (txid, provider_descriptor, err))
+            print('Unable to retrieve information for %s from %s: %s %s' % (txid, provider_descriptor, err, traceback.format_exc()))
             continue
 
         # Computes the entropy of the tx and the linkability of txos
